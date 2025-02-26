@@ -1,8 +1,10 @@
-# You can test the LAZ file separately first
 import laspy
-import pylas
 
-# Try reading with pylas
-las = pylas.read("data/als_data.laz")
-print("File read successfully with pylas")
-print(f"Number of points: {len(las.points)}")
+# Path to your .laz file
+file_path = "/Volumes/T7 Shield/Codebase/HAWK_assignment/forest_pulse_analysis/data/als_data.laz"
+
+# Open the LAZ file
+with laspy.open(file_path) as las_file:
+    print(las_file.header)
+    print(las_file.header)
+  

@@ -12,7 +12,7 @@ Jinja2 @ file:///home/conda/feedstock_root/build_artifacts/jinja2_1734823942230/
 joblib @ file:///home/conda/feedstock_root/build_artifacts/joblib_1733736026804/work
 kiwisolver @ file:///Users/runner/miniforge3/conda-bld/kiwisolver_1736908218616/work
 laspy==2.5.4
-lazrs==0.4.5
+lazrs==0.6.2
 mapclassify @ file:///home/conda/feedstock_root/build_artifacts/mapclassify_1733731066416/work
 MarkupSafe @ file:///Users/runner/miniforge3/conda-bld/markupsafe_1733219728782/work
 matplotlib==3.10.0

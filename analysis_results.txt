@@ -1,0 +1,22 @@
+=== Forest Stand Analysis Results ===
+
+Point Cloud Statistics:
+Total points: 1,690,502
+Ground level: 410.04m ASL
+Point density: 541974 points/ha
+
+Stand Characteristics:
+Stand area: 3.12 ha
+Number of trees: 1,310
+Trees per hectare: 420
+Mean tree height: 23.53m
+Median tree height: 24.08m
+Mean DBH: 0.26m
+Median DBH: 0.26m
+Basal area: 24.30 m²/ha
+
+Height Statistics:
+Mean height: 14.67m
+Median height: 16.45m
+Standard deviation: 8.21m
+Height range: -2.91m to 34.04m

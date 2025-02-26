@@ -1,0 +1,35 @@
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+def plot_sensitivity_results(sensitivity_results):
+    """
+    Create visualization of parameter sensitivity analysis
+    """
+    # Create subplot figure
+    fig, axes = plt.subplots(2, 2, figsize=(15, 15))
+
+    # Plot number of trees vs parameters
+    sns.heatmap(sensitivity_results.pivot('window_size', 'height_threshold', 'n_trees'),
+                ax=axes[0,0], cmap='viridis')
+    axes[0,0].set_title('Number of Trees Detected')
+
+    # Plot mean height vs parameters
+    sns.heatmap(sensitivity_results.pivot('window_size', 'height_threshold', 'mean_height'),
+                ax=axes[0,1], cmap='viridis')
+    axes[0,1].set_title('Mean Tree Height')
+
+    # Plot parameter interactions
+    sns.scatterplot(data=sensitivity_results,
+                   x='window_size', y='n_trees',
+                   size='height_threshold',
+                   ax=axes[1,0])
+    axes[1,0].set_title('Parameter Interactions')
+
+    # Plot distribution of metrics
+    sns.boxplot(data=sensitivity_results.melt(value_vars=['n_trees', 'mean_height', 'mean_dbh']),
+                x='variable', y='value',
+                ax=axes[1,1])
+    axes[1,1].set_title('Distribution of Metrics')
+
+    plt.tight_layout()
+    return fig

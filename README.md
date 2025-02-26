@@ -25,10 +25,11 @@ conda activate forest
 ```bash
 # Install core dependencies using conda
 conda install -c conda-forge pdal python-pdal
-conda install numpy matplotlib seaborn
+conda install numpy matplotlib 
 
 # Install additional dependencies using pip
-pip install laspy[laszip]  # For LAZ file processing
+
+pip install -r requirements.txt  #for all libraries
 ```
 
 ### Step 3: Verify Installation
